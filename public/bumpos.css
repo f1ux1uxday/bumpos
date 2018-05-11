@@ -1,0 +1,186 @@
+@font-face {
+  font-family: Norwester;
+  src: url("/font/norwester.otf") format("opentype");
+}
+
+body {
+  background-color: black;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: auto;
+  font-family: Norwester;
+  background-color: black;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center space-between;
+  align-content: center;
+  margin: auto;
+  margin-top: 2%;
+  width: 75%;
+  font-size: 1.75rem;
+  text-align: center;
+  border: 5px solid black;
+  padding: 1%;
+  background-color: white;
+}
+
+.page-head {
+  font-family: Norwester;
+}
+
+input {
+  font-family: Norwester;
+  margin-bottom: 1%;
+  font-size: 1.75rem;
+  border: none;
+  border-bottom: 5px solid #b0b0b0;
+}
+
+input:focus {
+  border-bottom: 5px solid black;
+}
+
+select {
+  margin-bottom: 1%;
+  font-family: Norwester;
+  font-size: 1.75rem;
+}
+
+select>option {
+  font-size: 1.25rem;
+}
+
+.btnDiv {
+  margin-top: 1%;
+  margin-left: 17%;
+  margin-right: 17%;
+  width: 66%;
+  padding: 3%;
+  font-size: 2.5rem;
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen 
+and (max-device-width: 1400px)
+and (orientation: landscape) {
+  .customer-info {
+    margin-top: 2.75rem;
+    font-size: 2.66rem;
+  }    
+  .btnDiv {
+    font-size: 3rem;
+  }
+}
+
+@media only screen
+and (max-device-width: 1025px)
+and (orientation: landscape) {
+  .customer-info {
+    margin-top: .5rem;
+    font-size: 1.6rem;
+  }
+  .btnDiv {
+    font-size: 2rem;
+    padding: 2%;
+  }
+}
+
+@media only screen
+and (max-device-width: 820px)
+and (orientation: landscape){
+  .customer-info {
+    margin-top: 0%;
+    font-size: 1rem;
+  }
+  input, select {
+    font-size: 1rem;
+  }
+  select>option {
+    font-size: 1rem;
+  }
+  .btnDiv {
+    padding: 1%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen
+and (max-device-width: 750px)
+and (orientation: landscape) {
+  .customer-info {
+    font-size: 1.25rem;
+    margin-top: 3%;
+  }
+  .input, select, option {
+    font-size: 1.25rem;
+  }
+  .btnDiv {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen
+and (orientation: portrait) {
+  .customer-info {
+    margin-top: 7.5%;
+    width: 90%;
+    font-size: 4rem;
+  }
+  input {
+    margin-bottom: 2%;
+    font-size: 2rem;
+  }
+  select {
+    margin-bottom: 2.5%;
+    font-size: 2rem
+  }
+  select>option {
+    font-size: 1rem;
+  }
+}
+
+@media only screen
+and (max-device-width: 420px)
+and (orientation: portrait) {
+  .customer-info {
+    margin-top: 10%;
+  }
+  input {
+    margin-bottom: 3%;
+    font-size: 3.5rem;
+  }
+  select {
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: 3.5rem;
+  }
+  select>option {
+    font-size: 1rem;
+  }
+  .btnDiv {
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen
+and (max-device-width: 380px)
+and (orientation: portrait) {
+  .customer-info {
+    margin-top: 7.5%;
+  }
+  select>option {
+    font-size: .75rem;
+  }
+}
