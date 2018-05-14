@@ -10,6 +10,11 @@
     let customerEmployer = document.getElementById('employer').value
     let customerOccupation = document.getElementById('occupation').value
     let customerCertify = document.getElementById('certify').value
+    let verifyButton = document.getElementById('verifyBtn')
+
+    let disableButton = () => {
+      verifyButton.setAttribute('href', 'javascript: void(0)')
+    }
 
     let requiredFields = [
       purchaseCost,
@@ -40,17 +45,20 @@
     };
 
     if (requiredFields.includes("")) {
+      disableButton()
       window.alert('Please enter information in all fields')
     } else if (requiredFields[0] < 1) {
+      disableButton()
       window.alert('Cost must be at least 1')
     } else if (requiredFields[6].length != 5) {
+      disableButton()
       window.alert('Zip Code must be at least 5 digits')
     } else if (!requiredFields.includes("") && requiredFields[0] > 0) {
       let squareURI = "square-commerce-v1://payment/create?data=" +
       encodeURIComponent(JSON.stringify(dataParameter));
 
-      document.getElementById('passBtn').setAttribute("href", squareURI)
-      document.getElementById('passBtn').innerText = 'Continue Transaction'
+      verifyButton.setAttribute("href", squareURI)
+      verifyButton.innerText = 'Continue Transaction'
       console.log(dataParameter.amount_money.amount)
     }
   }

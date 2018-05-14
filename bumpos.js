@@ -1,23 +1,22 @@
 const express = require('express')
 const path = require('path')
-const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const compression = require('compression')
 const noFavicons = require('express-no-favicons')
+const logger = require('morgan')
 
 const app = express()
 
 app.disable('x-powered-by')
-
 app.use(express.static(path.join(__dirname, 'src')))
-app.use(logger('dev'))
 app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(cors())
 app.use(compression())
 app.use(noFavicons())
+app.use(logger('dev'))
 
 app.set('port', process.env.PORT || 3000)
 
