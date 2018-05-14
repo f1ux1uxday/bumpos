@@ -21,7 +21,7 @@ app.use(logger('dev'))
 
 app.set('port', process.env.PORT || 3000)
 
-// App.get route for callback_url
+// Make app.get route for callback_url,
 // receive state from data object and use BigCommerce API
 // to store requiredFields data
 
