@@ -5,6 +5,9 @@
 
 body {
   background-color: black;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select:none;
 }
 .container {
   display: flex;

@@ -58,7 +58,6 @@
       encodeURIComponent(JSON.stringify(dataParameter));
 
       verifyButton.setAttribute("href", squareURI)
-      verifyButton.innerText = 'Continue Transaction'
       console.log(dataParameter.amount_money.amount)
     }
   }
