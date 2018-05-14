@@ -9,6 +9,7 @@ const logger = require('morgan')
 
 const app = express()
 
+// Express Middleware
 app.disable('x-powered-by')
 app.use(express.static(path.join(__dirname, 'src')))
 app.use(cookieParser())
