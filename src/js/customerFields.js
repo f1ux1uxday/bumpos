@@ -45,7 +45,7 @@
       window.alert('Cost must be at least 1')
     } else if (requiredFields[6].length != 5) {
       window.alert('Zip Code must be at least 5 digits')
-    } else if (!requiredFields.includes("") && requiredFields[0] >= 1) {
+    } else if (!requiredFields.includes("") && requiredFields[0] > 0) {
       let squareURI = "square-commerce-v1://payment/create?data=" +
       encodeURIComponent(JSON.stringify(dataParameter));
 

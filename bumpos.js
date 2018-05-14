@@ -5,16 +5,19 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const compression = require('compression')
+const noFavicons = require('express-no-favicons')
 
 const app = express()
 
 app.disable('x-powered-by')
-app.use(compression())
-app.use(cors())
-app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(cookieParser())
+
 app.use(express.static(path.join(__dirname, 'src')))
+app.use(logger('dev'))
+app.use(cookieParser())
+app.use(bodyParser.json())
+app.use(cors())
+app.use(compression())
+app.use(noFavicons())
 
 app.set('port', process.env.PORT || 3000)
 
